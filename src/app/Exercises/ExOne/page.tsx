@@ -29,7 +29,7 @@ export default function ExerciseOne() {
 
   return (
     <div className="flex flex-col items-center">
-      <h1>JavaScript Algorithms and Data Structures (Beta)</h1>
+      <h1>JavaScript Algorithms and Data Structuresss (Beta)</h1>
       {rowsToRender.map((row, index) => (
         <div key={index} style={{ fontFamily: 'monospace' }}>
           {row}
