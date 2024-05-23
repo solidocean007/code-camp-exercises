@@ -7,7 +7,7 @@ export function getAverage(scores: number[]) {
 }
 
 
-function getGrade(score: number) {
+export function getGrade(score: number) {
   if (score === 100) {
     return "A++";
   } else if (score >= 90) {
@@ -23,11 +23,11 @@ function getGrade(score: number) {
   }
 }
 
-function hasPassingGrade(score: number) {
+export function hasPassingGrade(score: number) {
   return getGrade(score) !== "F";
 }
 
-function studentMsg(totalScores: number[], studentScore: number) {
+export function studentMsg(totalScores: number[], studentScore: number) {
   const averageScores = getAverage(totalScores);
   const yourGrade = getGrade(studentScore);
   const passMsg = hasPassingGrade(studentScore) ? "You passed the course." : "You failed the course.";
@@ -35,4 +35,3 @@ function studentMsg(totalScores: number[], studentScore: number) {
   return `Class average: ${averageScores}. Your grade: ${yourGrade}. ${passMsg}`;
 }
 
-console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
